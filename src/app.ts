@@ -15,6 +15,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 register(app)
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`server started at http://localhost:${port}`)
 })
