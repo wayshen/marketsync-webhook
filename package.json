@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "ts-node src/index.ts",
+    "start": "ts-node app.ts",
     "serve": "nodemon app.ts"
   },
   "keywords": [],

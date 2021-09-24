@@ -3,6 +3,10 @@ import {Request, Response, NextFunction, Application} from 'express'
 import fs from 'fs'
 
 export const register = (app: Application) => {
+  app.get('/', (req: Request, res: Response) => {
+    return res.json({message: 'web is working'})
+  })
+
   app.post('/order/complete', (req: Request, res: Response) => {
     const date = Date.now()
     const fileName = `./src/log/order-complete/${date}.txt`

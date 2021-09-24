@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 import express from 'express'
 import path from 'path'
 import {register} from './src/routes'
-import * as serverless from 'serverless-http'
 
 dotenv.config()
 const port = process.env.SERVER_PORT
@@ -19,5 +18,3 @@ register(app)
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`)
 })
-
-module.exports.handler = serverless(app)
