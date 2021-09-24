@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import path from 'path'
-import {register} from './src/routes'
+import {register} from './routes'
 
 dotenv.config()
 const port = process.env.SERVER_PORT

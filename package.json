@@ -2,12 +2,14 @@
   "name": "marketsync-webhook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "ts-node app.ts",
-    "serve": "nodemon app.ts"
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "serve": "nodemon app.ts",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,6 @@
     "shelljs": "0.8.4",
     "ts-node": "^8.10.2",
     "tslint": "^6.1.3",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.10"
   }
 }
