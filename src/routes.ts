@@ -40,7 +40,7 @@ export const register = (app: Application) => {
       }
     })
 
-    return res.json({status: 'stock update log success'})
+    return res.json({status: `stock-update-${date} log success`})
   })
   app.get('/stock/decrease', (req: Request, res: Response) => {
     const date = Date.now()
